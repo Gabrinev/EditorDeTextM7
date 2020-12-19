@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane prefHeight="309.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar fx:id="menu" layoutX="40.0" layoutY="22.0">
+        <menus>
+          <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuFileClose" mnemonicParsing="false" onAction="#onClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuEdit" mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem fx:id="menuEditCopy" mnemonicParsing="false" onAction="#onCopy" text="Copy" />
+                  <MenuItem fx:id="menuEditCut" mnemonicParsing="false" onAction="#onCut" text="Cut" />
+              <MenuItem fx:id="menuEditPaste" mnemonicParsing="false" onAction="#onPaste" text="Paste" />
+                  <MenuItem fx:id="menuEditUndo" mnemonicParsing="false" onAction="#onUndo" text="Undo" />
+            </items>
+          </Menu>
+            <Menu fx:id="menuOptions" mnemonicParsing="false" text="Options">
+               <items>
+                  <Menu fx:id="menuOptionsFont" mnemonicParsing="false" text="Font">
+                    <items>
+                      <MenuItem fx:id="menuOptionsFontLSB" mnemonicParsing="false" onAction="#onFontLSB" text="Liberation Serif Bold" />
+                        <MenuItem fx:id="menuOptionsFontNSI" mnemonicParsing="false" onAction="#onFontNSI" text="Noto Sans Italic" />
+                    </items>
+                  </Menu>
+                  <Menu fx:id="menuOptionsSize" mnemonicParsing="false" text="Size">
+                    <items>
+                      <MenuItem fx:id="menuOptionsSize10" mnemonicParsing="false" onAction="#onSize10" text="10" />
+                        <MenuItem fx:id="menuOptionsSize40" mnemonicParsing="false" onAction="#onSize40" text="40" />
+                    </items>
+                  </Menu>
+               </items>
+            </Menu>
+          <Menu fx:id="menuHelp" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="menuHelpAbout" mnemonicParsing="false" onAction="#onAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="textArea" layoutX="40.0" layoutY="64.0" prefHeight="200.0" prefWidth="311.0" />
+   </children>
+</Pane>
